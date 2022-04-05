@@ -1,21 +1,14 @@
-import { ref } from "vue"
-
-
+import { ref } from "vue";
+// eslint-disable-next-line
 const parseData = (data) => {
-    if (!data) return
-    try {
+  if (!data) return;
+  try {
+    return data;
+  } catch (err) {
+    return err;
+  }
+};
 
-        return data
-    } catch (err) {
-        return err
-    }
-}
+const eData = ref({});
 
-
-const eData = ref({})
-
-
-export { eData }
-
-
-
+export { eData };

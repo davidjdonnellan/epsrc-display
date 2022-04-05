@@ -1,18 +1,13 @@
 <template>
   <div class="home">
     <img alt="Vue logo" src="../assets/logo.png" />
-    <HelloWorld msg="Welcome to Your Vue.js App" />
+    <Chart v-if="eData" msg="Welcome to Your EPSRC App" />
   </div>
 </template>
 
-<script>
+<script setup>
 // @ is an alias to /src
-import HelloWorld from "@/components/HelloWorld.vue";
-
-export default {
-  name: "HomeView",
-  components: {
-    HelloWorld,
-  },
-};
+import Chart from "@/components/Chart.vue";
+// eslint-disable-next-line
+import {eData} from "../state/data";
 </script>
