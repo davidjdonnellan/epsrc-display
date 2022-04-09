@@ -1,6 +1,8 @@
 .DS_Store
 node_modules
 /dist
+src/state/csv_data
+src/state/mock_data
 
 
 # local env files
