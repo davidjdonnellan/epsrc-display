@@ -1,0 +1,91 @@
+<svg
+        width="1200"
+        height="472"
+        viewBox="0 0 1200 472"
+        fill="none"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <rect width="1200" height="472" fill="white"></rect>
+        <circle
+          class="fade-down-in animate-stroke-color fade-down-in-speed-1"
+          cx="1072.5"
+          cy="117.5"
+          r="16"
+          stroke="#4844A3"
+        ></circle>
+        <circle
+          class="fade-down-in animate-stroke-color"
+          cx="999.5"
+          cy="385.5"
+          r="16"
+          stroke="#4EA87F"
+        ></circle>
+        <g class="animate-stroke-color delay-20 fade-down-in-react-1">
+          <rect
+            class="animate-stroke-color"
+            x="0"
+            y="0"
+            width="80.6512"
+            height="80.6512"
+            transform="rotate(-27.1056)"
+            fill="white"
+            stroke="#4EA87F"
+          ></rect>
+        </g>
+        <g class="animate-stroke-color delay-20 fade-down-in-react-2">
+          <rect
+            class="animate-stroke-color"
+            x="0"
+            y="0"
+            width="45"
+            height="45"
+            transform="rotate(15)"
+            fill="white"
+            stroke="#CF3E20"
+          ></rect>
+        </g>
+        <circle
+          class="fade-down-in animate-stroke-color fade-down-in-speed-3"
+          cx="410.5"
+          cy="112.5"
+          r="43"
+          fill="white"
+          stroke="#4844A3"
+        ></circle>
+        <g class="animate-stroke-color delay-20 fade-down-in-react-3">
+          <rect
+            class="animate-stroke-color"
+            x="0"
+            y="0"
+            width="45"
+            height="45"
+            transform="rotate(-35.2853)"
+            fill="white"
+            stroke="#FF8686"
+          ></rect>
+        </g>
+        <circle
+          class="fade-down-in animate-stroke-color"
+          cx="276"
+          cy="369"
+          r="23.5"
+          stroke="#FF7351"
+        ></circle>
+        <circle
+          class="fade-down-in animate-stroke-color fade-down-in-speed-3"
+          cx="127.462"
+          cy="244.462"
+          r="12.5"
+          transform="rotate(26.77 127.462 244.462)"
+          stroke="#F2A13A"
+        ></circle>
+        <circle
+          class="fade-down-in animate-stroke-color"
+          cx="193.192"
+          cy="184.191"
+          r="52.5"
+          transform="rotate(26.77 193.192 184.191)"
+          fill="white"
+          stroke="#CF3E20"
+        ></circle>
+      </svg>
