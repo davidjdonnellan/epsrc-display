@@ -1,7 +1,7 @@
 <template>
   <div class="home">
-    <img alt="Vue logo" src="../assets/logo.png" />
-    <Chart v-if="eData" msg="Welcome to Your EPSRC App" />
+    <img v-if="eData" alt="Vue logo" src="../assets/logo.png" />
+    <Chart msg="Welcome to Your EPSRC App" />
   </div>
 </template>
 

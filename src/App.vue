@@ -1,5 +1,5 @@
 <template>
-  <nav>
+  <nav class="row">
     <router-link to="/">Home</router-link>
   </nav>
   <router-view />
