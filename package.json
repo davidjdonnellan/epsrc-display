@@ -38,6 +38,7 @@
     "env": {
       "node": true
     },
+    "ignorePatterns": ["**/mock_data/*.js"],
     "extends": [
       "plugin:vue/vue3-essential",
       "eslint:recommended",
