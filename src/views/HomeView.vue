@@ -2,7 +2,8 @@
   <div class="p-3 mb-2 container">
     <Header />
     <Chart v-if="eData" :chart-data="eData" />
-    <DataView v-if="eData" :table-data="eData.breakdown" />
+    <DataView v-if="eData && eData.breakdown" :table-data="eData.breakdown" />
+    <div v-else>No Data Currently Available</div>
   </div>
 </template>
 

@@ -31,10 +31,10 @@ const transformData = (data) => {
   const annualTotal = {};
   const annualBreakdown = [];
   const expenseType = {};
-  console.log(data.length);
   for (let i = 0; i < data.length; i++) {
     const transaction = data[i];
     // if the log has a date and amount can be added
+    // returns sum of all transactions for year
     if (transaction["Transaction Date"] && transaction["Amount"]) {
       var year =
         annualTotal[transaction["Transaction Date"].split("/")[2]] || 0;
@@ -42,6 +42,7 @@ const transformData = (data) => {
 
       annualTotal[transaction["Transaction Date"].split("/")[2]] = year;
     }
+    // returns object of all tranaction types and amounts
     // if the log has a date and amount can be added
     if (transaction["Expense Type"] && transaction["Amount"]) {
       var type = expenseType[transaction["Expense Type"].trim()] || 0;
@@ -49,11 +50,10 @@ const transformData = (data) => {
 
       expenseType[transaction["Expense Type"].trim()] = type;
     }
-
+    // returns array of all transactions
     if (transaction["Transaction Date"] && transaction["Amount"]) {
       annualBreakdown.push(transaction);
     }
-    console.log(annualBreakdown);
   }
 
   return {

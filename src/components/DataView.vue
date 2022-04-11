@@ -27,20 +27,12 @@
   </div>
 </template>
 
-<script>
+<script setup>
 // eslint-disable-next-line
-export default {
-  name: "DataView",
-  data() {
-    return {
-      selectYear: "2018",
-    };
+const props = defineProps({
+  tableData: {
+    type: Object,
+    required: true,
   },
-  props: {
-    tableData: {
-      type: Object,
-      required: true,
-    },
-  },
-};
+});
 </script>

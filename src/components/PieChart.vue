@@ -1,7 +1,6 @@
 <template>
   <div class="rounded">
     <Pie :chart-data="chartData" :chart-options="chartOptions" />
-    <!-- {{ chartObject.expenseType }} -->
   </div>
 </template>
 
@@ -39,7 +38,7 @@ export default {
         plugins: {
           title: {
             display: true,
-            text: "Total of Transactions By Year (£)",
+            text: "Total Sum Transactions By Year (£)",
             padding: {
               top: 10,
               bottom: 10,
