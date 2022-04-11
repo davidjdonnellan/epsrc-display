@@ -21,7 +21,6 @@ export default {
       chartData: {
         datasets: [
           {
-            label: ["Green", "Red", "Blue"],
             data: this.chartObject.annualTotal,
             backgroundColor: [
               "rgba(255, 205, 86, 0.8)",
