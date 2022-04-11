@@ -7,7 +7,7 @@
         <BarChart :chart-object="chartData" />
       </div>
       <div class="chart-container col-lg-2 shadow p-3 mb-5 bg-white rounded-3">
-        <PieChart />
+        <PieChart :chart-object="chartData" />
       </div>
     </div>
   </div>
@@ -43,7 +43,7 @@ a {
   color: #42b983;
 }
 .chart-container {
-  width: 40%;
+  width: 49%;
   height: calc(var(--variable-width));
   /* display: inline-block; */
 }

@@ -29,21 +29,37 @@ const getData = (data) => {
 
 const transformData = (data) => {
   const annualTotal = {};
-  //   const yearsTotal = {};
-  //   var year = undefined;
+  const annualBreakdown = [];
+  const expenseType = {};
   console.log(data.length);
   for (let i = 0; i < data.length; i++) {
     const transaction = data[i];
-    if (transaction["Transaction Date"]) {
-      var yearArray =
-        Number(annualTotal[transaction["Transaction Date"].split("/")[2]]) || 0;
-      yearArray += Number(
-        transaction["Amount"].replace("£", "").replace(",", "")
-      );
+    // if the log has a date and amount can be added
+    if (transaction["Transaction Date"] && transaction["Amount"]) {
+      var year =
+        annualTotal[transaction["Transaction Date"].split("/")[2]] || 0;
+      year += Number(transaction["Amount"].replace("£", "").replace(",", ""));
 
-      annualTotal[transaction["Transaction Date"].split("/")[2]] = yearArray;
+      annualTotal[transaction["Transaction Date"].split("/")[2]] = year;
     }
+    // if the log has a date and amount can be added
+    if (transaction["Expense Type"] && transaction["Amount"]) {
+      var type = expenseType[transaction["Expense Type"].trim()] || 0;
+      type += Number(transaction["Amount"].replace("£", "").replace(",", ""));
+
+      expenseType[transaction["Expense Type"].trim()] = type;
+    }
+
+    if (transaction["Transaction Date"] && transaction["Amount"]) {
+      annualBreakdown.push(transaction);
+    }
+    console.log(annualBreakdown);
   }
-  return { annualTotal: annualTotal };
+
+  return {
+    annualTotal: annualTotal,
+    expenseType: expenseType,
+    breakdown: annualBreakdown,
+  };
 };
 getData(data);

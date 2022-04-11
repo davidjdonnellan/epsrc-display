@@ -21,7 +21,7 @@ export default {
       chartData: {
         datasets: [
           {
-            data: this.chartObject.annualTotal,
+            data: this.chartObject.expenseType,
             backgroundColor: [
               "rgba(255, 205, 86, 0.8)",
               "rgba(255, 99, 132, 0.8)",
@@ -53,7 +53,7 @@ export default {
           },
           title: {
             display: true,
-            text: "Total Transactions January",
+            text: "Transactions By Expense Type",
             padding: {
               top: 10,
               bottom: 10,

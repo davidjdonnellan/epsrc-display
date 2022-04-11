@@ -7,7 +7,7 @@
             <font-awesome-icon
               class="icons"
               :icon="['fas', 'wave-square']" /></span
-          >EPSRC Data</a
+          >DFID Data</a
         >
 
         <a class="d-flex" type="search" placeholder="Search" aria-label="Search"
@@ -17,10 +17,9 @@
     </nav>
     <div class="banner">
       <h1 class="d-flex justify-content-center text-center">
-        Welcome to the ESPRC Data Display
+        Welcome to the DFID Data Display
       </h1>
     </div>
-    <!-- <img src="../assets/background.svg" alt="My Happy SVG" /> -->
   </div>
 </template>
 

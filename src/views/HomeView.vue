@@ -1,12 +1,8 @@
 <template>
   <div class="p-3 mb-2 container">
     <Header />
-    <div class="row">
-      <Percentage />
-      <Percentage />
-    </div>
     <Chart v-if="eData" :chart-data="eData" />
-    <DataView />
+    <DataView v-if="eData" :table-data="eData.breakdown" />
   </div>
 </template>
 
@@ -15,7 +11,6 @@
 import Chart from "@/components/Chart.vue";
 import Header from "@/components/Header.vue";
 import DataView from "@/components/DataView.vue";
-import Percentage from "@/components/Percentage.vue";
 // eslint-disable-next-line
 import {eData} from "../state/data";
 </script>
