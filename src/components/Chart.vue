@@ -4,10 +4,10 @@
       <div
         class="chart-container col col-lg-2 shadow p-3 mb-5 bg-white rounded-3"
       >
-        <BarChart />
+        <BarChart :chart-object="chartData" />
       </div>
       <div class="chart-container col-lg-2 shadow p-3 mb-5 bg-white rounded-3">
-        <PieGraph />
+        <PieChart />
       </div>
     </div>
   </div>
@@ -16,9 +16,14 @@
 <script setup>
 // @ is an alias to /src
 import BarChart from "@/components/BarChart.vue";
-import PieGraph from "@/components/PieGraph.vue";
+import PieChart from "@/components/PieChart.vue";
 // eslint-disable-next-line
-import {eData} from "../state/data";
+const props = defineProps({
+  chartData: {
+    type: Object,
+    required: true,
+  },
+});
 </script>
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->

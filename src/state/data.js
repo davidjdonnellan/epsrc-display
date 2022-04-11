@@ -28,21 +28,22 @@ const getData = (data) => {
 // Transaction number: "100269-155 "
 
 const transformData = (data) => {
-  const category = {};
+  const annualTotal = {};
   //   const yearsTotal = {};
   //   var year = undefined;
+  console.log(data.length);
   for (let i = 0; i < data.length; i++) {
     const transaction = data[i];
-    console.log("t", transaction);
+    if (transaction["Transaction Date"]) {
+      var yearArray =
+        Number(annualTotal[transaction["Transaction Date"].split("/")[2]]) || 0;
+      yearArray += Number(
+        transaction["Amount"].replace("£", "").replace(",", "")
+      );
 
-    console.log(
-      "herere",
-      Date.getYear(String(transaction["Transaction Date"]))
-    );
-    category[Date.getYear(transaction["Transaction Date"])] =
-      transaction["Amount"];
-    console.log("cat", category);
-    return category;
+      annualTotal[transaction["Transaction Date"].split("/")[2]] = yearArray;
+    }
   }
+  return { annualTotal: annualTotal };
 };
 getData(data);

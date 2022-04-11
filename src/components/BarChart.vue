@@ -1,16 +1,6 @@
 <template>
   <div>
-    <Bar
-      :chart-options="chartOptions"
-      :chart-data="chartData"
-      :chart-id="chartId"
-      :dataset-id-key="datasetIdKey"
-      :plugins="plugins"
-      :css-classes="cssClasses"
-      :styles="styles"
-      :width="width"
-      :height="height"
-    />
+    <Bar :chart-options="chartOptions" :chart-data="chartData" />
   </div>
 </template>
 
@@ -21,52 +11,27 @@ export default {
   name: "BarChart",
   components: { Bar },
   props: {
-    chartId: {
-      type: String,
-      default: "bar-chart",
-    },
-    datasetIdKey: {
-      type: String,
-      default: "label",
-    },
-    width: {
-      type: Number,
-      default: 20,
-    },
-    height: {
-      type: Number,
-      default: 20,
-    },
-    cssClasses: {
-      default: "",
-      type: String,
-    },
-    styles: {
+    chartObject: {
       type: Object,
-      default: () => {},
-    },
-    plugins: {
-      type: Array,
-      default: () => [],
+      required: true,
     },
   },
   data() {
     return {
       chartData: {
-        labels: ["January", "February", "March"],
         datasets: [
           {
-            label: "Dates",
-            data: [40, 20, 12],
-            barThickness: undefined,
+            label: ["Green", "Red", "Blue"],
+            data: this.chartObject.annualTotal,
             backgroundColor: [
-              "rgba(255, 99, 132, 0.8)",
-              "rgba(255, 159, 64, 0.8)",
               "rgba(255, 205, 86, 0.8)",
+              "rgba(255, 99, 132, 0.8)",
               "rgba(75, 192, 192, 0.8)",
-              "rgba(54, 162, 235, 0.2)",
-              "rgba(153, 102, 255, 0.2)",
-              "rgba(201, 203, 207, 0.2)",
+              "rgba(201, 203, 207, 0.8)",
+              "rgba(255, 159, 64, 0.8)",
+              "rgba(75, 192, 192, 0.8)",
+              "rgba(54, 162, 235, 0.8)",
+              "rgba(153, 102, 255, 0.8)",
             ],
             borderColor: [
               "rgb(255, 99, 132)",
@@ -82,7 +47,20 @@ export default {
         ],
       },
       chartOptions: {
-        responsive: true,
+        // responsive: true,
+        plugins: {
+          legend: {
+            display: false,
+          },
+          title: {
+            display: true,
+            text: "Total Transactions January",
+            padding: {
+              top: 10,
+              bottom: 10,
+            },
+          },
+        },
       },
     };
   },

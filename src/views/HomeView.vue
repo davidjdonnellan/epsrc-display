@@ -5,8 +5,7 @@
       <Percentage />
       <Percentage />
     </div>
-    <Chart v-if="eData" />
-    {{ eData }}
+    <Chart v-if="eData" :chart-data="eData" />
     <DataView />
   </div>
 </template>

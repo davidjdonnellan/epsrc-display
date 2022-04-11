@@ -7,7 +7,7 @@
 <script>
 import { Pie } from "vue-chartjs";
 export default {
-  name: "PieGraph",
+  name: "PieChart",
   components: { Pie },
   data() {
     return {
