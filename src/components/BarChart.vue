@@ -32,15 +32,6 @@ export default {
               "rgba(54, 162, 235, 0.8)",
               "rgba(153, 102, 255, 0.8)",
             ],
-            borderColor: [
-              "rgb(255, 99, 132)",
-              "rgb(255, 159, 64)",
-              "rgb(255, 205, 86)",
-              "rgb(75, 192, 192)",
-              "rgb(54, 162, 235)",
-              "rgb(153, 102, 255)",
-              "rgb(201, 203, 207)",
-            ],
             borderWidth: undefined,
           },
         ],
@@ -64,27 +55,3 @@ export default {
   },
 };
 </script>
-
-<!-- Add "scoped" attribute to limit CSS to this component only -->
-<style scoped>
-h3 {
-  margin: 40px 0 0;
-}
-ul {
-  list-style-type: none;
-  padding: 0;
-}
-li {
-  display: inline-block;
-  margin: 0 10px;
-}
-a {
-  color: #42b983;
-}
-.chart-container {
-  padding: 5px;
-  width: 50%;
-  height: calc(var(--variable-width));
-  /* display: inline-block; */
-}
-</style>

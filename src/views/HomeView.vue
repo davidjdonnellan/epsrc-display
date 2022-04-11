@@ -15,8 +15,3 @@ import DataView from "@/components/DataView.vue";
 // eslint-disable-next-line
 import {eData} from "../state/data";
 </script>
-<style scoped>
-.header {
-  margin-bottom: 100%;
-}
-</style>
